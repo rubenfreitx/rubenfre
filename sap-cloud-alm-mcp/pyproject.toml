@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling>=1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sap-cloud-alm-mcp"
+version = "0.1.0"
+description = "MCP server for SAP Cloud ALM APIs"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+  { name = "GitHub Copilot" }
+]
+dependencies = [
+  "httpx>=0.28.1,<0.29",
+  "mcp>=1.10.0,<2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3.5,<9",
+]
+
+[project.scripts]
+sap-cloud-alm-mcp = "sap_cloud_alm_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sap_cloud_alm_mcp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

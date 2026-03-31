@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "sap-cloud-alm": {
+      "type": "stdio",
+      "command": "python",
+      "args": ["-m", "sap_cloud_alm_mcp"],
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug SAP Cloud ALM MCP",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "sap_cloud_alm_mcp",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "Run SAP Cloud ALM MCP",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "sap_cloud_alm_mcp",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "noDebug": true
+    }
+  ]
+}
