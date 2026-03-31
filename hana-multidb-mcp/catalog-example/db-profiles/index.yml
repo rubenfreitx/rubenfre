@@ -1,0 +1,19 @@
+# db-profiles/index.yml
+# ─────────────────────────────────────────────────────────────────────────────
+# Catalog index for hana-multidb-mcp.
+# Each entry points to a full connection profile file in this same directory.
+# Set enabled: false to exclude a profile without deleting it.
+# ─────────────────────────────────────────────────────────────────────────────
+
+version: "1"
+profiles:
+  - alias: hana-pyd
+    path: db-profiles/hana-pyd.yml
+    db_type: hana
+    enabled: true
+
+  # Add more profiles here, e.g.:
+  # - alias: hana-hqp
+  #   path: db-profiles/hana-hqp.yml
+  #   db_type: hana
+  #   enabled: false

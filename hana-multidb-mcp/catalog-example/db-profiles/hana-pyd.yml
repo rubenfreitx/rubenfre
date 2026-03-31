@@ -1,0 +1,31 @@
+# db-profiles/hana-pyd.yml
+# ─────────────────────────────────────────────────────────────────────────────
+# Connection profile for alias: hana-pyd  (HANA — schema PYD, des environment)
+# ─────────────────────────────────────────────────────────────────────────────
+# WARNING: This file contains credentials.
+# Store it in a PRIVATE repository and use a read-only GitHub token.
+# Rotate the password regularly and revoke access if the token is compromised.
+# ─────────────────────────────────────────────────────────────────────────────
+
+alias: hana-pyd
+db_type: hana
+
+connection:
+  host: axdeslthana1.central.inditex.grp
+  port: 30015
+  user: SAPHANADB
+  password: "REPLACE_WITH_ACTUAL_PASSWORD"
+  schema: PYD
+  ssl: true
+  encrypt: true
+  validate_cert: false
+  connection_type: auto
+
+limits:
+  max_rows: 200
+  max_cols: 50
+  query_timeout_sec: 30
+
+tags:
+  environment: des
+  team: your-team
